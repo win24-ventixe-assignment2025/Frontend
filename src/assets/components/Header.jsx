@@ -1,9 +1,14 @@
-import React from 'react'
+import { usePageTitle } from '../../contexts/PageTitleContext';
+
 
 const Header = () => {
-  return (
-    <header>Header</header>
-  )
-}
+  const { title } = usePageTitle();
 
-export default Header
+  return (
+    <header>
+      <h1 className="page-title">{title}</h1>
+    </header>
+  );
+};
+
+export default Header;
